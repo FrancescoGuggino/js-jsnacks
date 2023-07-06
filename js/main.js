@@ -6,35 +6,42 @@ L'array di N numeri da passare alla funzione lo create chiedendo all'utente quan
  e poi facendogli inserire questi N numeri all'utente stesso tramite apposito prompt().
  */
 
- let nNumeri = parseInt(prompt("Inserisci N numeri:"));
- let printNumbers = inserisciNumeri(nNumeri);
+ let lunghezzaArray = parseInt(prompt("Inserisci N numeri:"));
+ let arrayNumeriUtente = askUserNumbers(lunghezzaArray);
 
-let sommaTuttiNumeri = sommaNumeri(sommaNNumeri);
+let sommaTuttiNumeri = sommaNumeri(arrayNumeriUtente);
+
+
+// let array2 = [1, 2, 3];
+// let array3 = [23, 22, 43];
+
+// let somma2 = sommaNumeri(array2)
+// let somma3 = sommaNumeri(array3)
  
- 
-console.log(printNumbers);
+console.log(arrayNumeriUtente);
 console.log(sommaTuttiNumeri);
+
 
 //------------ funzione ---------
 
-function inserisciNumeri(nNumeri) {
+function askUserNumbers(nNumeri) {
 
-    let sommaNNumeri = [];
+    let arrayNumeri = [];
 
     for (let i = 0; i < nNumeri; i++) {
         let numeriUtente = parseInt(prompt("Inserisci i numeri:"));
 
-        sommaNNumeri.push(numeriUtente);
+        arrayNumeri.push(numeriUtente);
     }
 
-    return sommaNNumeri;
+    return arrayNumeri;
 }
 
-function sommaNumeri(sommaNNumeri) {
+function sommaNumeri(arrayGenerico) {
     let somma = 0;
 
-    for (let i = 0; i <sommaNNumeri.length; i++){
-        somma = somma+sommaNNumeri[i];
+    for (let i = 0; i <arrayGenerico.length; i++){
+        somma = somma+arrayGenerico[i];
     }
-    return somma  
+    return somma
 }
