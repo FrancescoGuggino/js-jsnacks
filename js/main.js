@@ -35,5 +35,6 @@ function sommaNumeri(sommaNNumeri) {
 
     for (let i = 0; i <sommaNNumeri.length; i++){
         somma = somma+sommaNNumeri[i];
-    }     
+    }
+    return somma  
 }
