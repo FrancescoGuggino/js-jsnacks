@@ -9,19 +9,20 @@ L'array di N numeri da passare alla funzione lo create chiedendo all'utente quan
  let nNumeri = parseInt(prompt("Inserisci N numeri:"));
  let printNumbers = inserisciNumeri(nNumeri);
 
+let sommaTuttiNumeri = sommaNumeri(sommaNumeri);
  
  
 console.log(printNumbers);
-
+console.log(sommaTuttiNumeri);
 
 //------------ funzione ---------
 
-function inserisciNumeri(N) {
+function inserisciNumeri(nNumeri) {
 
     let sommaNNumeri = [];
 
-    for (let i = 0; i < N; i++) {
-        let numeriUtente = parseint(prompt("Inserisci i numeri:"));
+    for (let i = 0; i < nNumeri; i++) {
+        let numeriUtente = parseInt(prompt("Inserisci i numeri:"));
 
         sommaNNumeri.push(numeriUtente);
     }
